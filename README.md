@@ -15,7 +15,7 @@
 <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
 
 ### 🖥️​ Desenvolvedores
-- <a href="">Gustavo Henrique da Silva Grilo</a>
+- <a href="https://github.com/Morghhul">Gustavo Henrique da Silva Grilo</a>
 - <a href="https://github.com/JoaoVittorVenturini">João Vittor Venturini Lopes Lindo</a>
-- <a href="">Nathan Augusto Junco Ferreira</a>
-- <a href="">Victor Rogério Jaques</a>
+- <a href="https://github.com/Nzzinn">Nathan Augusto Junco Ferreira</a>
+- <a href="https://github.com/JJAAX">Victor Rogério Jaques</a>
