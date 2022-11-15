@@ -29,7 +29,7 @@
         <div class="conteudo medio text-center">
             <h1 class="titulo">Editar Funcionário</h1>
             <form action="./salvarFuncionario.php" method="post">
-                <input type="hidden" name="acao" value="cadastrar">
+                <input type="hidden" name="acao" value="editar">
                 <div class="row">
                     <div class="col">
                         <label for="id">CPF</label>

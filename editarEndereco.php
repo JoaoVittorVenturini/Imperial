@@ -31,6 +31,7 @@
         <div class="conteudo medio text-center">
             <h1 class="titulo">Endereço</h1>
             <form action="./salvarEndereco.php" method="post">
+                <input type="hidden" name="acao" value="editar">
                 <div class="row">
                     <div class="col">
                         <label for="id">ID</label>
