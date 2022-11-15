@@ -5,7 +5,7 @@ CREATE DATABASE imperial;
 USE imperial;
 /* Cria a tabela de Usuários */
 CREATE TABLE usuario (
-  id INTEGER NOT NULL,
+  id INTEGER NOT NULL AUTO_INCREMENT,
   nome VARCHAR(100),
   username VARCHAR(20),
   email VARCHAR(100),
@@ -21,7 +21,7 @@ CREATE TABLE funcionario (
   email VARCHAR(100),
   senha VARCHAR(50),
   idCargo INTEGER,
-  idEndereco INTEGER,
+  idEndereco INTEGER, 
   PRIMARY KEY (cpf),
   FOREIGN KEY (idCargo) REFERENCES cargo(id),
   FOREIGN KEY (idEndereco) REFERENCES endereco(id)
@@ -35,7 +35,7 @@ CREATE TABLE endereco (
   complemento VARCHAR(100),
   cidade INTEGER,
   estado INTEGER,
-  PRIMARY KEY (id),
+  PRIMARY KEY (id)
 );
 ALTER TABLE `imperial`.`endereco` 
 ADD CONSTRAINT `idCidade`

@@ -11,7 +11,7 @@
       $senha2   = md5($_POST["senha2"]);
 
       if($senha == $senha2){
-        $sql = "INSERT INTO funcionario (cpf, nome, telefone, email, senha, idCargo, idEndereco) VALUES ('{$id}', '{$nome}', '{$telefone}', '{$email}', '{$senha}', '{$cargo}', '{$id}')";
+        $sql = "INSERT INTO funcionario (cpf, nome, telefone, email, senha, idCargo) VALUES ('{$id}', '{$nome}', '{$telefone}', '{$email}', '{$senha}', '{$cargo}')";
 
         $res = $conn->query($sql);
         
