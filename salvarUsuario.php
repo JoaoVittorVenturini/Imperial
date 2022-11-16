@@ -1,16 +1,16 @@
 <?php
-  include_once("./db/connectDB.php");
+  include ("./db/connectDB.php");
   switch($_REQUEST["acao"]){
     case 'cadastrar':
       $nome = $_POST["nome"];
       $username = $_POST["username"];
       $email = $_POST["email"];
       $telefone = $_POST["telefone"];
-      $senha = md5($_POST["senha"]);
-      $senha2 = md5($_POST["senha2"]);
+      $senha = $_POST["senha"];
+      $senha2 = $_POST["senha2"];
 
       if($senha == $senha2){
-        $sql = "INSERT INTO usuario (nome, username, email, telefone, senha, senha2) VALUES ('{$nome}', '{$username}', '{$email}','{$telefone}', '{$senha}";
+        $sql = "INSERT INTO usuario (nome, username, email, telefone, senha) VALUES ('{$nome}', '{$username}', '{$email}','{$telefone}', '{$senha}";
 
         $res = $conn->query($sql);
         

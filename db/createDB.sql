@@ -10,7 +10,7 @@ CREATE TABLE usuario (
   username VARCHAR(20),
   email VARCHAR(100),
   telefone VARCHAR(14), 
-  senha VARCHAR(50), 
+  senha VARCHAR(255), 
   PRIMARY KEY (id)
 );
 /* Cria a tabela de Funcionários */ 
@@ -19,7 +19,7 @@ CREATE TABLE funcionario (
   nome VARCHAR(100),
   telefone VARCHAR(14),
   email VARCHAR(100),
-  senha VARCHAR(50),
+  senha VARCHAR(255),
   idCargo INTEGER,
   idEndereco INTEGER, 
   PRIMARY KEY (cpf),

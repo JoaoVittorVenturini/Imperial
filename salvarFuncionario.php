@@ -7,8 +7,8 @@
       $email    = $_POST["email"];
       $telefone = $_POST["telefone"];
       $cargo    = $_POST["cargo"];
-      $senha    = md5($_POST["senha"]);
-      $senha2   = md5($_POST["senha2"]);
+      $senha    = $_POST["senha"];
+      $senha2   = $_POST["senha2"];
 
       if($senha == $senha2){
         $sql = "INSERT INTO funcionario (cpf, nome, telefone, email, senha, idCargo) VALUES ('{$id}', '{$nome}', '{$telefone}', '{$email}', '{$senha}', '{$cargo}')";
