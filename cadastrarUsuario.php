@@ -27,26 +27,26 @@
             <div class="col">
                 <label for="nome">Nome</label>
                 <br>
-                <input type="text" name="nome" placeholder="Ex: Lucas Soares">
+                <input type="text" name="nome" placeholder="Lucas Soares">
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="username">Username</label>
                 <br>
-                <input type="text" name="username" placeholder="Ex: Blesk">
+                <input type="text" name="username" placeholder="Blesk">
             </div>
             <div class="col">
                 <label for="telefone">Telefone</label>
                 <br>
-                <input type="text" name="telefone" placeholder="Ex: (00) 00000-0000">
+                <input type="text" name="telefone" placeholder="(00) 00000-0000">
             </div>
         </div>
         <div class="rol">
             <div class="col">
                 <label for="email">E-mail</label>
                 <br>
-                <input type="text" name="email" placeholder="Ex: Lucas.Soares@gmail.com">
+                <input type="text" name="email" placeholder="Lucas.Soares@gmail.com">
             </div>
         </div>
         <div class="row">
@@ -58,7 +58,7 @@
             <div class="col">
                 <label for="Senha2">Confimar senha</label>
                 <br>
-                <input type="password" name="senha2" placeholder="••••••••••">
+                <input type="password" name="senha2" placeholder="•••••••••">
             </div>
         </div>
         <div class="rol">

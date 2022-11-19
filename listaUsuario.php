@@ -34,38 +34,43 @@
                 <div class="col">
                     <h1>Telefone</h1>
                 </div>
+                <div class="col">
+                    <h1>Ações</h1>
+                </div>
             </div>
+            <?php
+            include_once("./db/connectDB.php");
+
+                $sql = "SELECT * FROM usuario";
+
+                $res = $conn->query($sql);
+
+                $qtd = $res->num_rows;
+
+                if($qtd > 0){
+                while($row = $res->fetch_object()){
+                    
+                    print "<div class='row'>";
+                    print "<div class='col'>" .$row->nome. "</div>";
+                    print "<div class='col'>" .$row->username. "</div>";
+                    print "<div class='col'>" .$row->email. "</div>";
+                    print "<div class='col'>" .$row->telefone. "</div>";
+                    print 
+                    "<div class='col'> 
+                    <button onclick=\"location.href='editarUsuario.php&id=".$row->id."'\" class='btn btn-success'>Editar</button> 
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir esse cadastro?')){location.href='editarUsuario.php&acao=excluir&id=".$row->id."}else{false;}\" class='btn btn-danger'>Exclir</button> 
+                    </div>";
+                    print "</div>";
+                }
+
+                }else{
+                print "<p class='alert alert-danger'>Nenhum resultado foi encontrado!</p>";
+                }
+            ?>
         </div>
-    </div>
-    <?php
-    include_once("./db/connectDB.php");
-
-    $sql = "SELECT * FROM usuario";
-
-    $res = $conn->query($sql);
-
-    $qtd = $res->num_rows;
-
-    if($qtd > 0){
-      while($row = $res->fetch_object()){
         
-        print "<div class='row'>";
-        print "<div class='col'>" .$row->nome. "</div>";
-        print "<div class='col'>" .$row->username. "</div>";
-        print "<div class='col'>" .$row->email. "</div>";
-        print "<div class='col'>" .$row->telefone. "</div>";
-        print 
-        "<div class='col'> 
-          <button onclick=\"location.href='editarUsuario.php&id=".$row->id."'\" class='btn btn-success'>Editar</button> 
-          <button onclick=\"if(confirm('Tem certeza que deseja excluir esse cadastro?')){location.href='editarUsuario.php&acao=excluir&id=".$row->id."}else{false;}\" class='btn btn-danger'>Exclir</button> 
-        </div>";
-        print "</div>";
-      }
-
-    }else{
-      print "<p class='alert alert-danger'>Nenhum resultado foi encontrado!</p>";
-    }
-  ?>
+    </div>
+    
 </div>
 </main>
 <footer>

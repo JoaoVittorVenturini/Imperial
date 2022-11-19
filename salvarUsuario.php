@@ -1,5 +1,5 @@
 <?php
-  include ("./db/connectDB.php");
+  include_once("./db/connectDB.php");
   switch($_REQUEST["acao"]){
     case 'cadastrar':
       $nome = $_POST["nome"];
@@ -10,10 +10,10 @@
       $senha2 = $_POST["senha2"];
 
       if($senha == $senha2){
-        $sql = "INSERT INTO usuario (nome, username, email, telefone, senha) VALUES ('{$nome}', '{$username}', '{$email}','{$telefone}', '{$senha}";
+        $sql = "INSERT INTO usuario (nome, username, email, telefone, senha) VALUES ('{$nome}', '{$username}', '{$email}','{$telefone}', '{$senha}')";
 
         $res = $conn->query($sql);
-        
+
         if($res==true){
           print "<script>alert('Usuário cadastrado com sucesso!')</script>";
           print "<script>location.href = './listaUsuario.php'</script>";
@@ -37,7 +37,7 @@
         id   = $_REQUEST[id]";
 
       $res = $conn->query($sql);
-        
+
         if($res==true){
           print "<script>alert('Usuário editado com sucesso!')</script>";
           print "<script>location.href = './listaUsuario.php'</script>";
@@ -49,7 +49,7 @@
       $sql = "DELETE FROM usuario WHERE id = ".$_REQUEST['id'];
 
       $res = $conn->query($sql);
-        
+
       if($res==true){
         print "<script>alert('Usuário excluido com sucesso!')</script>";
         print "<script>location.href = './listaUsuario.php'</script>";

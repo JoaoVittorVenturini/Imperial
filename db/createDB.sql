@@ -81,13 +81,14 @@ CREATE TABLE produtos (
   descricao VARCHAR(500),
   valor FLOAT,
   idDesenvolvedor VARCHAR(18),
+  dataLancamento TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
   FOREIGN KEY (idDesenvolvedor) REFERENCES desenvolvedores(cnpj)
 );
 /* Cria a tabela de Desenvolvedores */
 CREATE TABLE desenvolvedores (
   cnpj VARCHAR(18) NOT NULL,
-  nome VARCHAR(75) NOT NULL,
+  nome VARCHAR(100) NOT NULL,
   PRIMARY KEY (cnpj)
 );
 /* Cria a tabela de Bibliotecas */
@@ -100,9 +101,10 @@ CREATE TABLE biblioteca (
 /* Cria a tabela de Suportes */
 CREATE TABLE suporte (
   protocolo INTEGER NOT NULL,
-  dataInicio DATETIME,
+  dataInicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   motivo VARCHAR(100),
   descricao VARCHAR(500),
+  dataTermino TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   idUsuario INTEGER,
   idFuncionario VARCHAR(14),
   PRIMARY KEY (protocolo),
@@ -111,8 +113,8 @@ CREATE TABLE suporte (
 );
 /* Cria a tabela de Histórico de Suportes */
 CREATE TABLE historicoSuporte (
-  idUsuario INTEGER NOT NULL,
-  idSuporte INTEGER NOT NULL,
+  idUsuario INTEGER,
+  idSuporte INTEGER,
   FOREIGN KEY (idUsuario) REFERENCES usuario(id),
   FOREIGN KEY (idSuporte) REFERENCES suporte(protocolo)
 );
