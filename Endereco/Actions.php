@@ -1,5 +1,5 @@
 <?php
-  include_once("./db/connectDB.php");
+  include_once("../db/connectDB.php");
   switch($_REQUEST["acao"]){
     case 'cadastrar':
       $id           = $_POST["id"];
@@ -16,10 +16,10 @@
       $res = $conn->query($sql);
       
       if($res==true){
-        print "<script>alert('Endereço cadastradastrado com sucesso!')</script>";
-        print "<script>location.href = './listaEndereco.php'</script>";
+        print "<script>alert('Endereço cadastrado com sucesso!')</script>";
+        print "<script>location.href = './Read.php'</script>";
       }else{
-        echo "<script>alert('Erro ao tentar cadastradastrar endereço!')</script>";
+        echo "<script>alert('Erro ao tentar cadastrar endereço!')</script>";
       };
     break;
     case 'editar':
@@ -46,7 +46,7 @@
         
       if($res==true){
         print "<script>alert('Endereço editado com sucesso!')</script>";
-        print "<script>location.href = './listaEndereco.php'</script>";
+        print "<script>location.href = './Read.php'</script>";
       }else{
         echo "<script>alert('Erro ao tentar editar endereco!')</script>";
       };
@@ -58,10 +58,10 @@
         
       if($res==true){
         print "<script>alert('Endereço excluido com sucesso!')</script>";
-        print "<script>location.href = './listaEndereco.php'</script>";
       }else{
         echo "<script>alert('Erro ao tentar excluir endereco!')</script>";
       };
+      print "<script>location.href = './Read.php'</script>";
     break;
   }
 ?>

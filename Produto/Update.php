@@ -1,5 +1,5 @@
 <?php
-    include "./db/connectDB.php";
+    include "../db/connectDB.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Cadastro de Produto</title>
@@ -17,14 +17,14 @@
 
 <body>
     <header>
-            <a href="">
-                <img src="Logo.svg" alt="">
+            <a href="../index.php">
+                <img src="../img/Logo.svg" alt="Logo da Imperial">
             </a>
     </header>
 
     <main>
         <div class="conteudo medio text-center">
-            <form action="salvarProduto.php" method="post">
+            <form action="./Actions.php" method="post">
                 <input type="hidden" name="acao" value="editar">
                 <input type="hidden" name="id" value="<?php print $row-> id;?>">
                 <div class="row">
@@ -77,7 +77,7 @@
         
                 <div class="row">
                     <div class="col">
-                        <a href="listaProdutos.php"><input type="submit" value="Confirmar"></a>
+                        <a href="./Read.php"><input type="submit" value="Confirmar"></a>
                     </div>
                 </div>
             </form>

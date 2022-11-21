@@ -113,3 +113,11 @@ header img {
 .conteudo p {
   margin-top: 2.25rem;
 }
+
+table ,
+thead,
+tbody{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.25rem;
+}	

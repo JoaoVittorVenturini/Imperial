@@ -5,30 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <title>Editar Funcionário</title>
 </head>
 <body>
     <header>
-        <a href="#">
-            <img src="./img/Logo.svg" alt="Loga do time Imperial eSports">
+        <a href="../index.php">
+            <img src="../img/Logo.svg" alt="Loga do time Imperial eSports">
         </a>
     </header>
     <?php
-      include_once("./db/connectDB.php");
+      include_once("../db/connectDB.php");
 
-      $sql = "SELECT * FROM funcionario WHERE cpf = ".$_REQUEST['cpf'];
+      if(isset($_GET['cpf'])){
+        $cpf = $_GET['cpf'];
 
-      $res = $conn->query($sql);
+        $sql = "SELECT * FROM funcionario WHERE cpf = ".$_REQUEST['cpf'];
 
-      $row = $res->fetch_object();
+        $res = $conn->query($sql);
+        
+        $row = $res->fetch_object();
+      }
     ?>
     <main>
         <div class="conteudo medio text-center">
             <h1 class="titulo">Editar Funcionário</h1>
-            <form action="./salvarFuncionario.php" method="post">
+            <form action="./Actions.php" method="post">
                 <input type="hidden" name="acao" value="editar">
                 <div class="row">
                     <div class="col">

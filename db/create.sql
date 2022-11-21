@@ -9,15 +9,15 @@ CREATE TABLE usuario (
   nome VARCHAR(100),
   username VARCHAR(20),
   email VARCHAR(100),
-  telefone VARCHAR(14), 
+  telefone VARCHAR(25), 
   senha VARCHAR(255), 
   PRIMARY KEY (id)
 );
 /* Cria a tabela de Funcionários */ 
 CREATE TABLE funcionario (
-  cpf VARCHAR(14) NOT NULL,
+  cpf VARCHAR(25) NOT NULL,
   nome VARCHAR(100),
-  telefone VARCHAR(14),
+  telefone VARCHAR(25),
   email VARCHAR(100),
   senha VARCHAR(255),
   idCargo INTEGER,
@@ -80,14 +80,14 @@ CREATE TABLE produtos (
   nome VARCHAR(100),
   descricao VARCHAR(500),
   valor FLOAT,
-  idDesenvolvedor VARCHAR(18),
+  idDesenvolvedor VARCHAR(25),
   dataLancamento TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
   FOREIGN KEY (idDesenvolvedor) REFERENCES desenvolvedores(cnpj)
 );
 /* Cria a tabela de Desenvolvedores */
 CREATE TABLE desenvolvedores (
-  cnpj VARCHAR(18) NOT NULL,
+  cnpj VARCHAR(25) NOT NULL,
   nome VARCHAR(100) NOT NULL,
   PRIMARY KEY (cnpj)
 );
@@ -106,7 +106,7 @@ CREATE TABLE suporte (
   descricao VARCHAR(500),
   dataTermino TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   idUsuario INTEGER,
-  idFuncionario VARCHAR(14),
+  idFuncionario VARCHAR(25),
   PRIMARY KEY (protocolo),
   FOREIGN KEY (idUsuario) REFERENCES usuario(id),
   FOREIGN KEY (idFuncionario) REFERENCES funcionario(cpf)
