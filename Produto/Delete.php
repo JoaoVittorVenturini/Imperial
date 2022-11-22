@@ -1,5 +1,5 @@
 <?php
-  include "connectDB.php";
+  include "../db/connectDB.php";
 
   if(isset($_GET['id'])){
     $id = $_GET['id'];
@@ -13,5 +13,5 @@
       print "<script>alert('OPS!!! Algo deu errado.')</script>";
     };
   }
-  print "<script>location.href = 'listaProdutos.php'</script>";
+  print "<script>location.href = './Read.php'</script>";
 ?>

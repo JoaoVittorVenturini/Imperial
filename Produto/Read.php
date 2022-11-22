@@ -1,5 +1,5 @@
 <?php
-    include "connectDB.php";
+    include "../db/connectDB.php";
 ?>
 
 <!DOCTYPE html>
@@ -8,14 +8,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Lista de Produtos</title>
 </head>
 <body>
     <header>
-        <a href="">
-            <img src="Logo.svg" alt="">
+        <a href="../index.html">
+            <img src="../img/Logo.svg" alt="Logo do time Imperial eSports">
         </a>
         </header>
     
@@ -63,8 +63,8 @@
                     print "<div class='col'>" .$row->idDesenvolvedor. "</div>";
                     print 
                     "<div class='col'> 
-                        <button onclick=\"location.href='editarProduto.php?id=".$row->id."'\" class='btn btn-success'>Editar</button>
-                        <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluirProduto.php?id=".$row->id."'}else{false;}\"class='btn btn-danger'>Excluir</button>
+                        <button onclick=\"location.href='./Update.php?id=".$row->id."'\" class='btn btn-success'>Editar</button>
+                        <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='./Delete.php?id=".$row->id."'}else{false;}\"class='btn btn-danger'>Excluir</button>
                     </div>";
                     print "</div>";
                     print "<p></p>";

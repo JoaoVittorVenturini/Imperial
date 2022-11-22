@@ -1,5 +1,5 @@
 <?php
-    include "connectDB.php";
+    include "../db/connectDB.php";
 
     //Condição que mostra se o Produto foi cadastrado com sucesso.
     if(isset($_REQUEST['acao'])){
@@ -18,10 +18,10 @@
 
     if($res==true){
         print "<script>alert('Cadastrado com sucesso.');</script>";
-        print "<script>location.href='listaProdutos.php';</script>";
+        print "<script>location.href='./Read.php';</script>";
     }else{
         print "<script>alert('OPS!!! Algo deu errado.');</script>";
-        print "<script>location.href='cadastroProduto.php';</script>";
+        print "<script>location.href='./Create.php';</script>";
     }
     break;
 
@@ -46,7 +46,7 @@
         }else{
             echo "<script>alert('OPS!!! Algo deu errado.')</script>";
         };
-        print "<script>location.href = 'listaProdutos.php'</script>";
+        print "<script>location.href = './Read.php'</script>";
         break;
 }
 }
