@@ -23,9 +23,9 @@
       <form action="./validacaoLogin.php" method="post">
         <div class="row">
           <div class="col">
-            <label for="user">E-mail / Usuário</label>
+            <label for="email">E-mail</label>
             <br>
-            <input type="text" name="user" placeholder="Crush ou joaovittor@exemplo.com">
+            <input type="text" required name="email" placeholder="Crush ou joaovittor@exemplo.com">
           </div>
         </div>
         <p></p>
@@ -33,7 +33,7 @@
           <div class="col">
             <label for="senha">Senha</label>
             <br>
-            <input type="password" name="senha" placeholder="•••••••••••••">
+            <input type="password" required name="senha" placeholder="•••••••••••••">
             <br>
             <span>Esqueceu a senha? <a href="#"> Clique Aqui </a></span>
           </div>
