@@ -17,9 +17,10 @@
       
       if($res==true){
         print "<script>alert('Endereço cadastrado com sucesso!')</script>";
-        print "<script>location.href = './Read.php'</script>";
+        print "<script>location.href = '../Funcionario/Create.php'</script>";
       }else{
         echo "<script>alert('Erro ao tentar cadastrar endereço!')</script>";
+        print "<script>location.href = './Create.php'</script>";
       };
     break;
     case 'editar':
@@ -50,18 +51,6 @@
       }else{
         echo "<script>alert('Erro ao tentar editar endereco!')</script>";
       };
-    break;
-    case 'excluir':
-      $sql = "DELETE FROM Endereco WHERE id = $_REQUEST[id]";
-
-      $res = $conn->query($sql);
-        
-      if($res==true){
-        print "<script>alert('Endereço excluido com sucesso!')</script>";
-      }else{
-        echo "<script>alert('Erro ao tentar excluir endereco!')</script>";
-      };
-      print "<script>location.href = './Read.php'</script>";
     break;
   }
 ?>
