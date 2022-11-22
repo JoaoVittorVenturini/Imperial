@@ -36,6 +36,9 @@
           <h1>Cargo</h1>
         </div>
         <div class="col">
+          <h1>Endereço</h1>
+        </div>
+        <div class="col">
           
         </div>
       </div>
@@ -58,6 +61,7 @@
             print "<div class='col'>" .$row->email. "</div>";
             print "<div class='col'>" .$row->telefone. "</div>";
             print "<div class='col'>" .$row->idCargo. "</div>";
+            print "<div class='col'>" .$row->idEndereco. "</div>";
             print 
             "<div class='col'> 
               <button onclick=\"location.href='./Update.php?cpf=".$row->cpf."'\" class='btn btn-success'>Editar</button> 

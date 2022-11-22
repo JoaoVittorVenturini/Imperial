@@ -7,6 +7,7 @@
       $email    = $_POST["email"];
       $telefone = $_POST["telefone"];
       $cargo    = $_POST["cargo"];
+      $endereco = $_POST["endereco"];
       $senha    = $_POST["senha"];
       $senha2   = $_POST["senha2"];
  
@@ -22,7 +23,7 @@
         }
         $senha = $t;
 
-        $sql = "INSERT INTO funcionario (cpf, nome, telefone, email, senha, idCargo) VALUES ('{$id}', '{$nome}', '{$telefone}', '{$email}', '{$senha}', '{$cargo}')";
+        $sql = "INSERT INTO funcionario (cpf, nome, telefone, email, senha, idCargo, idEndereco) VALUES ('{$id}', '{$nome}', '{$telefone}', '{$email}', '{$senha}', '{$cargo}', '{$endereco}')";
 
         $res = $conn->query($sql);
         

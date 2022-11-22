@@ -62,8 +62,8 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <label for="cidade">ID endereço</label>
-                        <select name="cidade" id="cidade" style="padding: 0 0.625rem; width: 100%; height: 3.75rem; background-color: #DCDCDC; border: none; border-radius: 8px;">
+                        <label for="endereco">ID endereço</label>
+                        <select name="endereco" id="endereco" style="padding: 0 0.625rem; width: 100%; height: 3.75rem; background-color: #DCDCDC; border: none; border-radius: 8px;">
                         <?php
                             include_once("../db/connectDB.php");
                             $endereco = "SELECT * FROM endereco";
@@ -80,11 +80,11 @@
                 <div class="row">
                     <div class="col">
                         <label for="senha">Senha</label>
-                        <input type="password" required name="senha" placeholder="•••••••••" minlength="10" maxlength="100" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{10,}$">
+                        <input type="password" required name="senha" placeholder="•••••••••" minlength="10" maxlength="100" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{10,}$" title="deve conter no minimo 10 caracteres (numeros, especiais, e letras maiúsculas e minúsculas)">
                     </div>
                     <div class="col">
                         <label for="senha2">Confimar senha</label>
-                        <input type="password" required name="senha2" placeholder="•••••••••" minlength="10" maxlength="100" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{10,}$">
+                        <input type="password" required name="senha2" placeholder="•••••••••" minlength="10" maxlength="100" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{10,}$" title="deve conter no minimo 10 caracteres (numeros, especiais, e letras maiúsculas e minúsculas)">
                     </div>
                 </div>
                 <div class="row">

@@ -46,19 +46,19 @@
             <div class="col">
                 <label for="email">E-mail</label>
                 <br>
-                <input type="text" name="email" placeholder="Lucas.Soares@gmail.com">
+                <input type="text" name="email" placeholder="Lucas.Soares@gmail.com" minlength="5" maxlength="100" pattern="^[A-Za-z0-9.\-\_]{3,}+@[a-z0-9]{3,}+.(com|com.br|edu.br)$">
             </div>
         </div>
         <div class="row">
             <div class="col">   
                 <label for="senha">Senha</label>
                 <br>
-                <input type="password" required name="senha" placeholder="•••••••••">
+                <input type="password" required name="senha" placeholder="•••••••••" minlength="10" maxlength="100" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{10,}$" title="deve conter no minimo 10 caracteres (numeros, especiais, e letras maiúsculas e minúsculas)">
             </div>
             <div class="col">
                 <label for="Senha2">Confimar senha</label>
                 <br>
-                <input type="password" name="senha2" placeholder="•••••••••">
+                <input type="password" name="senha2" placeholder="•••••••••" minlength="10" maxlength="100" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{10,}$" title="deve conter no minimo 10 caracteres (numeros, especiais, e letras maiúsculas e minúsculas)">
             </div>
         </div>
         <div class="rol">

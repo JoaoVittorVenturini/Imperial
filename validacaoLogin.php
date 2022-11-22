@@ -25,8 +25,11 @@
         print "<script>alert('Senha incorreta!')</script>";
         print "<script>location.href = './login.php'</script>";
       }else{
+        print "<script>alert('Logado com sucesso!')</script>";
         print "<script>location.href = './index.php'</script>";
       };
+
+      
     }else{
       print "<script>alert('Erro ao tentar logar!')</script>";
       print "<script>location.href = './login.php'</script>";
