@@ -66,7 +66,6 @@
             print "</div>";
             print "<p></p>";
           }
-
         }else{
           print "<p class='alert alert-danger'>Nenhum resultado foi encontrado!</p>";
         }

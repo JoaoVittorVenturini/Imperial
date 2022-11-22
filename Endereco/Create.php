@@ -26,33 +26,33 @@
                 <div class="row">
                     <div class="col">
                         <label for="id">ID</label>
-                        <input type="text" name="id" placeholder="ID do Endereço">
+                        <input type="text" name="id" placeholder="ID do Endereço" minlength="5" maxlength="11">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="rua">Rua</label>
-                        <input type="text" name="rua" placeholder="Rua Sergipe">
+                        <input type="text" name="rua" placeholder="Rua Sergipe" minlength="5" maxlength="100">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="num">Numero</label>
-                        <input type="text" name="num" placeholder="142">
+                        <input type="text" name="num" placeholder="142" minlength="1" maxlength="20">
                     </div>
                     <div class="col">
                         <label for="bairro">Bairro</label>
-                        <input type="text" name="bairro" placeholder="Centro">
+                        <input type="text" name="bairro" placeholder="Centro" minlength="5" maxlength="50">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="complemento">Complemento</label>
-                        <input type="text" name="complemento" placeholder="ap:404">
+                        <input type="text" name="complemento" placeholder="ap:404" minlength="0" maxlength="100">
                     </div>
                 </div>
                 
-                <div class="row teste">
+                <div class="row">
                     <div class="col">
                         <label for="cidade">Cidade</label>
                         <select name="cidade" id="cidade" style="padding: 0 0.625rem; width: 100%; height: 3.75rem; background-color: #DCDCDC; border: none; border-radius: 8px;">

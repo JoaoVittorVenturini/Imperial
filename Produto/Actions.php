@@ -1,7 +1,8 @@
-    <?php
+<?php
         include "../db/connectDB.php";
 
         //Condição que mostra se o Produto foi cadastrado com sucesso.
+        if(isset($_REQUEST['acao'])){
         switch($_REQUEST["acao"]){
         case 'cadastrar':
         $id=$_POST["id"];
@@ -24,44 +25,29 @@
         }
         break;
 
-    case 'editar':
-        $id=$_POST["id"];
-        $nome=$_POST["nome"];
-        $desc=$_POST["desc"];
-        $valor=$_POST["valor"];
-        $dev=$_POST["dev"];
-
-        $sql = "UPDATE produtos SET
-                nome='{$nome}',
-                desc='{$desc}',
-                valor='{$valor}',
-                dev='{$dev}'
-                WHERE
-                id=".$_REQUEST["id"];
-
-        $res = $conn->query($sql);
-
-        if($res==true){
-            print "<script>alert('Editado com sucesso.');</script>";
-            print "<script>location.href='./Read.php';</script>";
-        }else{
-            print "<script>alert('OPS!!! Algo deu errado.');</script>";
-            print "<script>location.href='./Read.php';</script>";
-        }
-        break;
-
-        case 'excluir':
-            $sql = "DELETE FROM produtos WHERE id=".$_REQUEST["id"];
-
+        case 'editar':
+            $id           = $_POST["id"];
+            $nome          = $_POST["nome"];
+            $desc          = $_POST["desc"];
+            $valor       = $_POST["valor"];
+            $dev            = $_POST["dev"];
+      
+            $sql = "UPDATE produtos SET
+            nome = '{$nome}',
+            descricao = '{$desc}',
+            valor = '{$valor}',
+            idDesenvolvedor = '{$dev}'
+            WHERE id = '{$id}'";
+            
             $res = $conn->query($sql);
-
+              
             if($res==true){
-                print "<script>alert('Excluido com sucesso.');</script>";
-                print "<script>location.href='./Read.php';</script>";
+              print "<script>alert('Produto editado com sucesso!')</script>";
             }else{
-                print "<script>alert('OPS!!! Algo deu errado.');</script>";
-                print "<script>location.href='./Read.php';</script>";
-            }
-        break;    
+              echo "<script>alert('OPS!!! Algo deu errado.')</script>";
+            };
+            print "<script>location.href = './Read.php'</script>";
+          break;
     }
+}
     ?>

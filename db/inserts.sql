@@ -57,8 +57,3 @@ INSERT INTO funcionario (cpf, nome, telefone, email, senha, idCargo, idEndereco)
 (2022114004, 'Gabriel Henrique', '(43) 96666-6666', 'gabriel.henrique@imperial.com', 'ssoFtQF9LL9i36', 2022110004, 2022113005),
 (2022114005, 'Larissa Silva', '(43) 95555-5555', 'lari.silva@gmail.com', 'spsiKfdVotq4U4', 2022110005, 2022113006),
 (2022114006, 'Bruno Oliveira', '(43) 94444-4444', 'bruno.oliveira@imperial', 'WfWaz6DqXHiSkS', 2022110006, 2022113002);
-INSERT INTO suporte (protocolo, dataInicio, motivo, descricao, idUsuario, idFuncionario) VALUES
-(2022115001, '2021-09-01', 'Problema com o jogo', 'O jogo não abre', 2022112001, 2022114001),
-(2022115002, '2021-09-01', 'Racismo', 'O outro jogador só fica insultando os players', 2022112002, 2022114004),
-(2022115003, '2021-09-01', 'Problema com o jogo', 'O jogo não está abrindo', 2022112002, 2022114001),
-(2022115004, '2021-09-01', 'Problema com as formas de pagamento', 'Não estão aceitando pagamento em PIX', 2022112004, 2022114004);

@@ -3,9 +3,10 @@
 CREATE DATABASE imperial;
 /* Usa a nossa data base */
 USE imperial;
+SET FOREIGN_KEY_CHECKS=0;
 /* Cria a tabela de Usuários */
 CREATE TABLE usuario (
-  id INTEGER NOT NULL AUTO_INCREMENT,
+  id INTEGER NOT NULL,
   nome VARCHAR(100),
   username VARCHAR(20),
   email VARCHAR(100),
@@ -66,7 +67,7 @@ CREATE TABLE estado (
   ddd varchar(50)
 )COMMENT='Unidades Federativas';
 /* Cria a tabela de cargos */
-CREATE TABLE cargo (
+CREATE TABLE cargo(
   id INTEGER NOT NULL,
   nome VARCHAR(100),
   descricao VARCHAR(500),
@@ -98,7 +99,12 @@ CREATE TABLE biblioteca (
   FOREIGN KEY (idUsuario) REFERENCES usuario(id),
   FOREIGN KEY (idProduto) REFERENCES produtos(id)
 );
-/* Cria a tabela de Suportes */
+
+
+
+/* 
+  Cria a tabela de Suportes
+  
 CREATE TABLE suporte (
   protocolo INTEGER NOT NULL,
   dataInicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -111,10 +117,13 @@ CREATE TABLE suporte (
   FOREIGN KEY (idUsuario) REFERENCES usuario(id),
   FOREIGN KEY (idFuncionario) REFERENCES funcionario(cpf)
 );
-/* Cria a tabela de Histórico de Suportes */
+
+  Cria a tabela de Histórico de Suportes  
+
 CREATE TABLE historicoSuporte (
   idUsuario INTEGER,
   idSuporte INTEGER,
   FOREIGN KEY (idUsuario) REFERENCES usuario(id),
   FOREIGN KEY (idSuporte) REFERENCES suporte(protocolo)
 );
+ */

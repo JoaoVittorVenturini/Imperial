@@ -39,29 +39,29 @@
                 <div class="row">
                     <div class="col">
                         <label for="id">ID</label>
-                        <input type="text" name="id" value="<?php print $row->id ?>">
+                        <input type="text" name="id" value="<?php print $row->id ?>" minlength="5" maxlength="11">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="rua">Rua</label>
-                        <input type="text" name="rua" value="<?php print $row->rua ?>">
+                        <input type="text" name="rua" value="<?php print $row->rua ?>" minlength="5" maxlength="100">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="num">Numero</label>
-                        <input type="text" name="num" value="<?php print $row->numero ?>">
+                        <input type="text" name="num" value="<?php print $row->numero ?>" minlength="1" maxlength="20">
                     </div>
                     <div class="col">
                         <label for="bairro">Bairro</label>
-                        <input type="text" name="bairro" value="<?php print $row->bairro ?>">
+                        <input type="text" name="bairro" value="<?php print $row->bairro ?>" minlength="5" maxlength="50">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="complemento">Complemento</label>
-                        <input type="text" name="complemento" value="<?php print $row->complemento ?>">
+                        <input type="text" name="complemento" value="<?php print $row->complemento ?>" minlength="0" maxlength="100">
                     </div>
                 </div>
                 <div class="row">

@@ -1,3 +1,7 @@
+<?php
+    include "../db/connectDB.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,13 +14,12 @@
 </head>
 <body>
     <header>
-        <a href="../index.php">
-            <img src="../img/Logo.svg" alt="Logo da Imperial">
+        <a href="../index.html">
+            <img src="../img/Logo.svg" alt="">
         </a>
-    </header>
+        </header>
     
     <div class="conteudo grande text-center">
-        <form action="./Actions.php" method="post">
         <div class="row row-cols-6">
             <div class="col">
                 <h1>ID</h1>
@@ -39,36 +42,37 @@
             </div>
         </div>
         <?php
-            include "../db/connectDB.php";
+                $sql = "SELECT * FROM produtos";
 
-            $sql = "SELECT * FROM produtos";
-
-            $res = $conn->query($sql);
-        
-            $qtd = $res->num_rows;
-        
-            if($qtd > 0){
-                while($row = $res->fetch_object()){
-        
-                print "<div class='row'>";
-                print "<div class='col'>" .$row->id. "</div>";
-                print "<div class='col'>" .$row->nome. "</div>";
-                print "<div class='col'>" .$row->descricao. "</div>";
-                print "<div class='col'>" .$row->valor. "</div>";
-                print "<div class='col'>" .$row->idDesenvolvedor. "</div>";
-                print 
-                "<div class='col'> 
-                    <button class='btn btn-success'onclick=\"location.href='./Update.php&acao=editar&id=".$row-> id."';\"class='btn btn-success'>Editar</button>
-        
-                    <button class='btn btn-danger'onclick=\"if(confirma('Tem certeza que deseja excluir?')){location.href='./Actions.php&acao=excluir&id=".$row-> id."';}else{false;}\"class='btn btn-success'>Excluir</button>
-                </div>";
+                $res = $conn->query($sql);
+            
+                $qtd = $res->num_rows;
+            
+                if($qtd > 0){
+                    while($row = $res->fetch_object()){
+            
+                    print "<div class='row'>";
+                    print "<div class='col'>" .$row->id. "</div>";
+                    print "<div class='col'>" .$row->nome. "</div>";
+                    print "<div class='col'>" .$row->descricao. "</div>";
+                    print "<div class='col'>" .$row->valor. "</div>";
+                    print "<div class='col'>" .$row->idDesenvolvedor. "</div>";
+                    print 
+                    "<div class='col'> 
+                        <button onclick=\"location.href='./Update.php?id=".$row->id."'\" class='btn btn-success'>Editar</button>
+                        <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='./Delete.php?id=".$row->id."'}else{false;}\"class='btn btn-danger'>Excluir</button>
+                    </div>";
+                    }
+            
+                }else{
+                    print "<script>alert('Nenhum produto cadastrado.');</script>";
                 }
-        
-            }else{
-                print "<script>alert('Nenhum produto cadastrado.');</script>";
-            }
         ?>
-        </form>
     </div>
+    <footer>
+        <?php
+            $conn->close();
+        ?>
+    </footer>
 </body>
 </html>

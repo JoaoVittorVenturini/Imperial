@@ -17,8 +17,8 @@
 
 <body>
     <header>
-            <a href="../index.php">
-                <img src="../img/Logo.svg" alt="Logo da Imperial">
+            <a href="../index.html">
+                <img src="Logo.svg" alt="">
             </a>
     </header>
 
@@ -75,9 +75,10 @@
             </form>
         </div>
     </main>
-
     <footer>
-
+        <?php
+            $conn->close();
+        ?>
     </footer>
 </body>
 
