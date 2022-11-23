@@ -12,7 +12,7 @@
 </head>
 <body>
   <header>
-      <a href="../index.php">
+      <a href="../index.html">
           <img src="../img/Logo.svg" alt="Loga do time Imperial eSports">
       </a>
   </header>
