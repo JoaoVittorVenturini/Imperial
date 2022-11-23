@@ -12,7 +12,7 @@
 </head>
 <body>
   <header>
-    <a href="index.html">
+    <a href="./index.html">
       <img src="logo.svg" alt="Logo da Imperial (time de eSports)">
     </a>
   </header>
