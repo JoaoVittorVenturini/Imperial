@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <a href="../index.php">
+        <a href="../index.html">
             <img src="../img/Logo.svg" alt="Loga do time Imperial eSports">
         </a>
     </header>
@@ -77,16 +77,6 @@
                             }
                         ?>
                         </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="senha">Senha</label>
-                        <input type="password" required name="senha" value="<?php $row->senha ?>" minlength="10" maxlength="100" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{10,}$">
-                    </div>
-                    <div class="col">
-                        <label for="senha2">Confimar senha</label>
-                        <input type="password" required name="senha2" value="<?php $row->senha ?>" minlength="10" maxlength="100" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{10,}$">
                     </div>
                 </div>
                 <div class="row">
