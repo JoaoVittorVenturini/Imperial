@@ -1,5 +1,5 @@
 <?php
-  include "conecta.php";
+  include_once("../db/connectDB.php");
   if(isset($_REQUEST['acao'])){
   switch($_REQUEST["acao"]){
     case 'cadastrar':
@@ -42,7 +42,7 @@
       }else{
           echo "<script>alert('Não foi possivel editar o cargo!')</script>";
       };
-      print "<script>location.href = 'listaCargo.php'</script>";
+      print "<script>location.href = './listaCargo.php'</script>";
       break;
 
     case 'excluir':
@@ -52,7 +52,7 @@
 
       if($res==true){
         print "<script>alert('Usuário excluido com sucesso!') </script>";
-        print "<script>location.href = 'listaCargo.php' </script>";
+        print "<script>location.href = './listaCargo.php' </script>";
       }else{
         echo "<script>alert('Erro ao tentar excluir usuário!') </script>";
       };
