@@ -1,5 +1,5 @@
 <?php
-    include "connectDB.php";
+    include "../db/connectDB.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Cadastro de Usuário</title>
@@ -15,11 +15,11 @@
 <body>
     <header>
         <main>
-        <a href="index.html">
-            <img src="img/Logo.svg" alt="Logo da Imperial (time de eSports)">
+        <a href="../index.html">
+            <img src="../img/Logo.svg" alt="Logo da Imperial (time de eSports)">
         </a>
     </header>
-    <form action="Actions.php" method="post">
+    <form action="./Actions.php" method="post">
     <input type="hidden" name="acao" value="cadastrar">
     <div class="conteudo medio">
         <h1>Cadastro de Usuário</h1>
