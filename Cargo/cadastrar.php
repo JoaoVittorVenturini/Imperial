@@ -1,6 +1,6 @@
 <?php
 
-    include("conecta.php");
+    include_once("../db/connectDB.php");
 
     $idCargo = $_POST['idCargo'];
     $nomeCargo = $_POST['nomeCargo'];
@@ -15,9 +15,9 @@
 
     if($res==true){
         print "<script>alert('Endereço cadastrado com sucesso!')</script>";
-        print "<script>location.href = 'listaCargo.php'</script>";
+        print "<script>location.href = './listaCargo.php'</script>";
     }else{
         echo "<script>alert('Erro ao tentar cadastrar endereço!')</script>";
-        print "<script>location.href = 'listaCargo.php'</script>";
+        print "<script>location.href = './listaCargo.php'</script>";
     };
 ?>
