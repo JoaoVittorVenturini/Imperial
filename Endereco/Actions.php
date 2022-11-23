@@ -41,7 +41,7 @@
         cidade      = '{$cidade}',
         estado      = '{$estado}'
       WHERE 
-        id          = $_REQUEST[id];";
+        id          = $_REQUEST[id]";
       
       $res = $conn->query($sql);
         
