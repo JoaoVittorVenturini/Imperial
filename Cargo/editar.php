@@ -1,5 +1,5 @@
 <?php
-    include "conecta.php";
+    include_once("../db/connectDB.php");
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 </head>
 <body>
   <header>
-    <a href="index.html">
+    <a href="./index.html">
       <img src="logo.svg" alt="Logo da Imperial (time de eSports)">
     </a>
   </header>
@@ -35,7 +35,7 @@
 
   <div class="conteudo medio">
    <h1 class="titulo">Editar Cargo</h1>
-    <form action="acoes.php" method="post">
+    <form action="./acoes.php" method="post">
         <input type="hidden" name="acao" value="editar">
         <div class="row">
             <div class="col">
