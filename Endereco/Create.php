@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <title>Cadastro de Funcionário 2/2</title>
+    <title>Cadastro de Funcionário 1/2</title>
 </head>
 
 <body>
     <header>
-        <a href="../index.php">
+        <a href="../index.html">
             <img src="../img/Logo.svg" alt="Loga do time Imperial eSports">
         </a>
     </header>
@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="id">ID</label>
-                        <input type="text" name="id" placeholder="ID do Endereço" minlength="5" maxlength="11">
+                        <input type="text" name="id" placeholder="ID do Endereço" minlength="5" maxlength="10">
                     </div>
                 </div>
                 <div class="row">
@@ -58,12 +58,12 @@
                         <select name="cidade" id="cidade" style="padding: 0 0.625rem; width: 100%; height: 3.75rem; background-color: #DCDCDC; border: none; border-radius: 8px;">
                         <?php
                             include_once("../db/connectDB.php");
-                            $cidade = "SELECT * FROM Cidade";
+                            $cidade = "SELECT * FROM cidade";
                             $res = $conn->query($cidade);
                             $row = $res->fetch_assoc();
                             
                             while($row = $res->fetch_object()){
-                                print "<option value=\"$row->id\"> $row->nome </option>";
+                                print "<option value='$row->id'> $row->nome </option>";
                             }
                         ?>
                         </select>
@@ -77,9 +77,7 @@
                                 $linha = $result->fetch_assoc();
 
                                 while($linha = $result->fetch_object()){
-                                    
-                                   print "<option value=\" $linha->id \"> $linha->uf </option>";
-                                    
+                                    print "<option value=\"$linha->id\"> $linha->uf </option>";
                                 }
                             ?>
                         </select>
