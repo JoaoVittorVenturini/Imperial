@@ -1,5 +1,5 @@
 <?php
-  include "connectDB.php";
+  include "../db/connectDB.php";
   switch($_REQUEST["acao"]){
     case 'cadastrar':
       $nome = $_POST["nome"];
@@ -27,14 +27,14 @@
 
         if($res==true){
           print "<script>alert('Usuário cadastrado com sucesso!')</script>";
-          print "<script>location.href = 'Read.php'</script>";
+          print "<script>location.href = './Read.php'</script>";
         }
     else{
         print "<script>alert('Erro ao tentar cadastrar!')</script>";
-        print "<script>location.href = 'Create.php'</script>";
+        print "<script>location.href = './Create.php'</script>";
       };
         }
-    print "<script>location.href = 'Read.php'</script>";
+    print "<script>location.href = './Read.php'</script>";
     break;
     case 'editar':
       $id           = $_POST["id"];
@@ -57,7 +57,7 @@
       }else{
           echo "<script>alert('erro ao editar usuario.')</script>";
       };
-      print "<script>location.href = 'Read.php'</script>";
+      print "<script>location.href = './Read.php'</script>";
       break;
 }
   
